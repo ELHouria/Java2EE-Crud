@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.Formation" table="formation">
+		<id name="idForm"  column="id_formation"/>
+		<property name="theme"    column="theme"/>
+		<many-to-one name="lieu" column="id_lieu" class="model.Lieu"/>
+		                 <!--  name of the attribute in the formation  class that will wrap data of the forigh key -->
+		                 
+		<set name="listFormateurs" table="ligneformationformateur">
+			<key column="id_formation"/>
+			<many-to-many class="model.Formateur" column="cin" ></many-to-many>
+		</set>
+	</class>
+</hibernate-mapping> 

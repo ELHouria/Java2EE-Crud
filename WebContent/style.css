@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+
+body{
+	
+	
+	margin:0;
+	padding:0;
+	font-family:cursive;
+	text-align:center;
+	background-color:grey;
+}
+button{
+	padding:10px;
+	background-color : black;
+	color:white;
+     width: 150px;
+     margin:10px;
+     border: 2px solid purple ;
+     cursor:pointer;
+	
+}
+
+table{
+	margin-top:30px;
+}
